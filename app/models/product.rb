@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+    validates :nameproduct  ,   presence: true
+    validates :unitprice    ,   presence: true
+    
     class<< self
         def product_finder(product_name:)
             products    = Product.all
